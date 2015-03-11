@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-int main()
-{
-    int new = 0;
+int main() {
+
+    int sum = 0;
     int current = 2;
     int last = 1;
-    int sum = 0;
+    int temp;
 
     while (current < 4000000) {
-        if (current % 2 == 0) {
-            sum = sum + current;
-        }
-        new = current + last;
+        if (current % 2 == 0) sum += current;
+        temp = current + last;
         last = current;
-        current = new;
+        current = temp;
     }
     
-    printf("The sum is %d\n", sum);
+    printf("%d\n", sum);
+
+    return 0;
 }

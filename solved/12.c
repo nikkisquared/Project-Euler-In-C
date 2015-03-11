@@ -1,29 +1,31 @@
 #include <stdio.h>
 #include <math.h>
 
-/* to compile: gcc 12.c -o 12 -lm */
+/* to compile: gcc 12.c -o 12.o -lm */
 
 int main() {
 
     long triNum = 0;
     long nextStep = 1;
+    int divisors = 0;
+    long n;
 
-    int divisors;
-    long num;
+    while(divisors < 500) {
 
-    do {
-        triNum += nextStep++;
         // every number >1 is divisible by 1 and itself
+        // so divisors and n can start at 2
         divisors = 2;
-        num = 1;
+        n = 2;
+        triNum += nextStep++;
 
-        while(num++ < sqrt(triNum) - 1) {
-            if(triNum % num == 0) {
+        while(n < sqrt(triNum)) {
+            if(triNum % n == 0)
                 divisors += 2;
-            }
+            n++;
         }
+    }
 
-    } while(divisors < 500);
+    printf("%ld\n", triNum);
 
-    printf("%ld has %d divisors!\n", triNum, divisors);
+    return 0;
 }

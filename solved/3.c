@@ -4,7 +4,7 @@
 
 #define HUGENUM 600851475143
 
-/* to compile: gcc 3.c -o 3 -lm */
+/* to compile: gcc 3.c -o 3.o -lm */
 
 int main()
 {

@@ -15,11 +15,11 @@ int is_palindrome(char num[], int length) {
     return isPalindrome;
 }
 
-int main()
-{
+int main() {
 
     int largest = 0;
     int x, y, product, length;
+    // largest space ever needed
     char num[7];
 
     for (x = 1000; x >= 100; x--) {
@@ -33,7 +33,6 @@ int main()
     }
 
     printf("%d\n", largest);
-
 
     return 0;
 }

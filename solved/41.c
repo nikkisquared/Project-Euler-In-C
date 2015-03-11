@@ -36,9 +36,8 @@ int main() {
     while ((++p - primes) < numPrimes) {
 
         length = sprintf(num, "%ld", *p);
-        if(is_pandigital(*p, length)) {
+        if(is_pandigital(*p, length))
             highest = *p;
-        }
     }
 
     printf("%ld\n", highest);

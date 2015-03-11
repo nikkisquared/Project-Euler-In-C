@@ -7,7 +7,6 @@ int is_palindrome(char num[], int length) {
     end += length - 1;
     int isPalindrome = 1;
 
-
     do {
         isPalindrome = *start == *end;
     } while(isPalindrome && (end-- - start++) > 0);
@@ -19,7 +18,7 @@ int itob(long n, char bin[]) {
 
     int length = 0;
     int leading1 = 0;
-    // largest binary bit
+    // largest binary bit needed
     long bitSize = 524288;
 
     while(bitSize) {
@@ -38,11 +37,11 @@ int itob(long n, char bin[]) {
     return length;
 }
 
-int main()
-{
+int main() {
 
     long sum = 0;
     long n;
+    // largest space ever needed
     char num[7];
     char bin[20];
     int numLength, binLength;
@@ -50,14 +49,13 @@ int main()
     for (n = 1; n < 1000000; n++) {
         numLength = sprintf(num, "%ld", n);
         binLength = itob(n, bin);
+
         if(is_palindrome(num, numLength) &&
-            is_palindrome(bin, binLength)) {
+            is_palindrome(bin, binLength))
             sum += n;
-        }
     }
 
     printf("%ld\n", sum);
-
 
     return 0;
 }

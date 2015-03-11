@@ -11,7 +11,7 @@
     int numPrimes = get_primes(numCap, primesWanted, primes);
 */
 
-/* to compile: gcc [file].c -o [file] -lm */
+/* to compile: gcc [file].c -o [file].o -lm */
 
 // upper limits to prevent seg faults
 #define PRIMESCAP 1000000

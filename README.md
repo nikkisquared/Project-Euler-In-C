@@ -12,9 +12,11 @@ Install
 =======
 
 Each file can be compiled as follows:
+
 gcc [file].c -o [file].o
 
 Files that include math.h need to be compiled like this:
+
 gcc [file].c -o [file].o -lm
 
 History

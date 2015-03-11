@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
+    
     int i;
     int sum_of_squares = 0;
+    int square_of_sum = 0;
     int sum = 0;
-    int difference;
 
     for (i = 0; i <= 100; i++) {
         sum_of_squares += i * i;
@@ -13,10 +13,10 @@ int main()
     }
 
     for (i = 0; i < sum; i++) {
-        difference += sum;
+        square_of_sum += sum;
     }
 
-    difference -= sum_of_squares;
+    printf("%d\n", square_of_sum - sum_of_squares);
 
-    printf("%d\n", difference);
+    return 0;
 }

@@ -5,7 +5,7 @@
 // how many abundant numbers there are below NUMERIC_CAP
 #define ABUNDANTS_CAP 6964
 
-/* to compile: gcc 23.c -o 23 -lm */
+/* to compile: gcc 23.c -o 23.o -lm */
 
 int sum_of_divisors(int number) {
 
@@ -16,7 +16,8 @@ int sum_of_divisors(int number) {
     for(n = 2; n <= sqrt(number); n++) {
         if(number % n == 0) {
             sum += n;
-            if(n != number / n) sum += (number / n);
+            if(n != number / n)
+                sum += (number / n);
         }
     }
 
@@ -27,11 +28,12 @@ int is_abundant_sum(long number, int abundants[]) {
 
     int x = 0;
     int y = 0;
+
     for(x = 0; x < ABUNDANTS_CAP && abundants[x] < number; x++) {
         for(y = 0; y < ABUNDANTS_CAP && abundants[y] < number; y++) {
-            if(number == abundants[x] + abundants[y]) {
+
+            if(number == abundants[x] + abundants[y])
                 return 1;
-            }
         }
     }
     return 0;
@@ -46,14 +48,14 @@ int main() {
 
     // finds all abundant numbers
     for(n = 1; n < NUMERIC_CAP; n++) {
-        if(sum_of_divisors(n) > n) {
+        if(sum_of_divisors(n) > n)
             abundants[current++] = n;
-        }
     }
 
     long sum;
     for(n = 1; n < NUMERIC_CAP; n++) {
-        if(!is_abundant_sum(n, abundants)) sum += n;
+        if(!is_abundant_sum(n, abundants))
+            sum += n;
     }
     
     printf("%ld\n", sum);

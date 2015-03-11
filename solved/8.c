@@ -30,8 +30,9 @@ int main() {
             if(sum > highest) highest = sum;
         }
     }
+    
+    fclose(fp);
     printf("%lld\n", highest);
 
-    fclose(fp);
     return 0;
 }

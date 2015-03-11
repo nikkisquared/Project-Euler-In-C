@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "primes.c"
 
-/* to compile: gcc 7.c -o 7 -lm */
+/* to compile: gcc 7.c -o 7.o -lm */
 
-int main()
-{ 
+int main() { 
     int primesToFind = 10001;
     long primes[primesToFind];
     int numPrimes = get_primes(0, primesToFind, primes);

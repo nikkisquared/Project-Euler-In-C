@@ -3,7 +3,7 @@
 
 #define HUGENUM 2000000
 
-/* to compile: gcc 10.c -o 10 -lm */
+/* to compile: gcc 10.c -o 10.o -lm */
 
 int main() {
 

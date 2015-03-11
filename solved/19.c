@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-
-
-
 int main()
 {
     // first day is a tuesday
@@ -19,8 +16,11 @@ int main()
             if(month == 1 && !(year % 4)) day++;
             day %= 7;
 
+            // sunday is represented by day being 0, so this works
             sundays += (!day);
         }
     }
     printf("%d\n", sundays);
+
+    return 0;
 }

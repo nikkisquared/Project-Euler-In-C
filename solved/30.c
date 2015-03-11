@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-/* to compile: gcc 30.c -o 30 -lm */
+/* to compile: gcc 30.c -o 30.o -lm */
 
 int main() {
 
@@ -9,14 +9,13 @@ int main() {
     int p;
     long totalSum = 0;
 
-    for(x = 10; x <= 100000000; x++)
+    for(x = 10; x <= 1000000; x++)
     {
         n = x;
         sum = 0;
         while(n) {
             p = n % 10;
             sum += pow(p, 5);
-            //printf("%ld | %d | %ld\n", n, p, sum);
             n /= 10;
         }
         if(sum == x) {
@@ -24,6 +23,8 @@ int main() {
             printf("new %ld | sum %ld\n", x, totalSum);
         }
     }
+
+    printf("%ld\n", totalSum);
 
     return 0;
 }
